@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class projectileMoveTest : MonoBehaviour
+public class projectileMove : MonoBehaviour
 {
 
     Rigidbody2D rb;
