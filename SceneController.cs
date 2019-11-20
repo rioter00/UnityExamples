@@ -26,11 +26,6 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void delayedReload(float delay)
-    {
-        Invoke("ReloadScene", 2);
-    }
-
     // adds 1 to the current scene index and loads it
     public void loadNextScene()
     {
@@ -41,5 +36,15 @@ public class SceneController : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void delayedNextLoad(float delay)
+    {
+        Invoke("loadNextScene", 2);
+    }
+
+    public void delayedReload(float delay)
+    {
+        Invoke("ReloadScene", 2);
     }
 }
