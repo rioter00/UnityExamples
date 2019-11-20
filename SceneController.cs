@@ -23,7 +23,7 @@ public class SceneController : MonoBehaviour
     // feed the desired scene name (a string -- use QUOTES) to load
     public void loadScene(string sceneName)
     {
-        loadScene(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void delayedReload(float delay)
@@ -34,12 +34,12 @@ public class SceneController : MonoBehaviour
     // adds 1 to the current scene index and loads it
     public void loadNextScene()
     {
-        loadScene(currentSceneIndex + 1);
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
     // reload the current scene
     public void ReloadScene()
     {
-        loadScene(currentSceneIndex);
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
