@@ -40,11 +40,11 @@ public class SceneController : MonoBehaviour
 
     public void delayedNextLoad(float delay)
     {
-        Invoke("loadNextScene", 2);
+        Invoke("loadNextScene", delay);
     }
 
     public void delayedReload(float delay)
     {
-        Invoke("ReloadScene", 2);
+        Invoke("ReloadScene", delay);
     }
 }
