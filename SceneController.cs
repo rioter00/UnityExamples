@@ -1,13 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 // basic scene controller
 public class SceneController : MonoBehaviour
 {
-    private int currentSceneIndex;
+    public int currentSceneIndex;
 
     private void Awake()
     {
@@ -18,13 +17,18 @@ public class SceneController : MonoBehaviour
     // feed the desired scene index to load
     public void loadScene(int sceneIndex)
     {
-        loadScene(sceneIndex);
+        SceneManager.LoadScene(sceneIndex);
     }
 
     // feed the desired scene name (a string -- use QUOTES) to load
     public void loadScene(string sceneName)
     {
         loadScene(sceneName);
+    }
+
+    public void delayedReload(float delay)
+    {
+        Invoke("ReloadScene", 2);
     }
 
     // adds 1 to the current scene index and loads it
