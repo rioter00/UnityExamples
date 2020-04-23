@@ -1,3 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 public class resetPrefs : MonoBehaviour
 {
     public void resetPrefValues()
